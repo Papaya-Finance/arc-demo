@@ -1,0 +1,52 @@
+{
+  "name": "papaya-arc-demo",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "license": "BUSL-1.1",
+  "scripts": {
+    "test": "node --test scripts/*.test.mjs",
+    "dev": "node scripts/prepare-web.mjs && vite web --host 127.0.0.1",
+    "build": "node scripts/prepare-web.mjs && vite build web && node scripts/clean-web-build.mjs",
+    "liquidator": "node liquidator/index.mjs",
+    "setup:tools": "bash scripts/install-tools.sh",
+    "test:contracts": ".tools/arc/forge test --no-match-contract ArcForkTest -vv",
+    "test:fork": "bash scripts/fork-test.sh",
+    "dev:live": "node scripts/live.mjs frontend",
+    "liquidator:live:dry": "node scripts/live.mjs keeper-dry",
+    "liquidator:live": "node scripts/live.mjs keeper-live",
+    "test:frontend": "node --test scripts/frontend-*.test.mjs scripts/rpc-failover.test.mjs scripts/math.test.mjs",
+    "test:liquidator": "node --test scripts/keeper-config.test.mjs scripts/state.test.mjs scripts/local-lock.test.mjs scripts/deployment-config.test.mjs",
+    "check": "node scripts/check-sources.mjs",
+    "format": "prettier --write \"web/**/*.{jsx,mjs,css,html}\" \"scripts/*.mjs\" \"liquidator/*.mjs\" package.json",
+    "format:check": "prettier --check \"web/**/*.{jsx,mjs,css,html}\" \"scripts/*.mjs\" \"liquidator/*.mjs\" package.json",
+    "dev:fixture": "node scripts/frontend-fixture.mjs",
+    "check:publication": "node scripts/publication-check.mjs",
+    "build:keeper": "esbuild liquidator/index.mjs --bundle --platform=node --format=esm --packages=external --outfile=dist/liquidator.mjs",
+    "build:contracts": ".tools/arc/forge build"
+  },
+  "dependencies": {
+    "@dicebear/core": "9.4.3",
+    "@dicebear/lorelei-neutral": "9.2.2",
+    "@fontsource-variable/inter": "5.3.0",
+    "@openzeppelin/contracts": "5.1.0",
+    "@reown/appkit": "1.8.24",
+    "@reown/appkit-adapter-ethers": "1.8.24",
+    "ethers": "6.17.0",
+    "lucide-react": "1.41.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "prettier": "3.6.2",
+    "vite": "7.3.6"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Papaya-Finance/arc-demo.git"
+  }
+}

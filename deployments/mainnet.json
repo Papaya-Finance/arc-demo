@@ -1,0 +1,29 @@
+{
+  "chainId": 5042,
+  "name": "Arc Mainnet",
+  "rpcUrl": "https://rpc.mainnet.arc.io",
+  "explorer": "https://explorer.arc.io",
+  "usdc": "0x3600000000000000000000000000000000000000",
+  "nativeCurrency": {
+    "name": "USDC",
+    "symbol": "USDC",
+    "decimals": 18
+  },
+  "tokenDecimals": 6,
+  "source": "https://docs.arc.io/arc/references/connect-to-arc",
+  "status": "deployed",
+  "papaya": "0xd7AbBB80894f35c139570d2DdDB90F99D4Fc92C7",
+  "projectId": 0,
+  "projectOwner": "0x0d8449e0786761720EE158d3558d64253e2ccbf4",
+  "deployer": "0x0d8449e0786761720EE158d3558d64253e2ccbf4",
+  "demoUser": "0x0d8449e0786761720EE158d3558d64253e2ccbf4",
+  "keeper": "0x304639C22bf990E3fDD63a00422587331816425d",
+  "creator": "0x7bfc84257b6D818c4e49Eeb7B9422569154EE5a6",
+  "scooter": "0x304639C22bf990E3fDD63a00422587331816425d",
+  "deploymentBlock": 24220201,
+  "deploymentTransaction": "0x4487b52e7351c369d9dda2ff202537d02c6c2a106514f049ca404925440f0bb7",
+  "runtimeCodeHash": "0x97938a3257ab65695b2ce51ed4a40396e30decf9763f3648ce1cc92886b16c35",
+  "verified": true,
+  "frontendUrl": null,
+  "checkedAt": "2026-10-04T12:45:06.348Z"
+}
